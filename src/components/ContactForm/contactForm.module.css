@@ -1,0 +1,23 @@
+.phoneBookForm{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background-color: gray;
+    width: 100%;
+    max-width: 250px;
+
+
+}
+.phoneBookFormBtn{
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+}
+.phoneBookInput{
+    width: 100;
+    background-color: transparent;
+}
+    

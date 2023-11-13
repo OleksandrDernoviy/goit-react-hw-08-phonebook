@@ -1,0 +1,15 @@
+.phonebookBox{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 100px;
+}
+.phonebookTitle{
+    color: yellow;
+    font-size: 30px;
+}
+.contactsTitle{
+    font-size: 30px;
+    /* color: darkblue; */
+    color: gray;
+}

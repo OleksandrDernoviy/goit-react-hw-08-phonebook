@@ -1,0 +1,10 @@
+.filterLabel{
+    font-size: 18px;
+    color: blue;
+    margin-bottom: 5px;
+}
+.filterInput{
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: gray;
+}
