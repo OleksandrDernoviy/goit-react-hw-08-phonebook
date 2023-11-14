@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import ContactForm from '../ContactForm';
-import ContactList from '../ContactList';
-import Filter from '../Filter';
+import ContactForm from '../ContactForm/ContactForm';
+import ContactList from '../ContactList/ContactList';
+import Filter from '../Filter/Filter';
 import css from './app.module.css';
 import '../../index.css';
 
@@ -39,8 +39,8 @@ class App extends Component {
     }));
   };
 
-  handleFilterChange = el => {
-    this.setState({ filter: el.target.value.toLowerCase() });
+  handleFilterChange = e => {
+    this.setState({ filter: e.target.value.toLowerCase() });
   };
   handleRemoveContact = id => {
     this.setState(prevState => ({
