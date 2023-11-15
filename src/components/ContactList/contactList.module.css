@@ -5,6 +5,7 @@
     height: auto;
     /* background-color: gray; */
     border-radius: 2px;
+    border: 1px solid yellow;
 }
 
 .contactListItem{

@@ -1,6 +1,7 @@
 .filterLabel{
-    font-size: 18px;
-    color: blue;
+    font-size: 19px;
+    font-weight: 700;
+    color: blueviolet;
     margin-bottom: 5px;
 }
 .filterInput{
