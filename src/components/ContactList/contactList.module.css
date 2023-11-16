@@ -5,13 +5,15 @@
     height: auto;
     /* background-color: gray; */
     border-radius: 2px;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 .contactListItem{
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    border: 1px solid yellow;
+    /* background-color: yellow; */
 }
 .contactDelBtn{
     padding: 3px;
