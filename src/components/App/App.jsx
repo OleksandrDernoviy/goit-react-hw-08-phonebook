@@ -31,25 +31,17 @@ export const App = () => {
       number,
     };
     setContacts(prevState => [...prevState, newContact]);
-  } 
-
-const handleFilterChange = e => {
-  setFilter(e.target.value.toLowerCase());
-};
-  
-  
-  const handleRemoveContact = id => {
-    setContacts(prevContacts => 
-      prevContacts.filter(contact => contact.id !== id),
-    );
   };
 
-  
-  useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
+  const handleFilterChange = e => {
+    setFilter(e.target.value.toLowerCase());
+  };
 
-
+  const handleRemoveContact = id => {
+    setContacts(prevContacts =>
+      prevContacts.filter(contact => contact.id !== id)
+    );
+  };
   useEffect(() => {
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
@@ -58,23 +50,26 @@ const handleFilterChange = e => {
     }
   }, [])
 
-   const filterContacts = contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
-    );
-   
- return (
-   <div className={css.phonebookBox}>
-     <h1 className={css.phonebookTitle}>Phonebook</h1>
-        <ContactForm onAddContact={handleAddContact} />
-         <h2 className={css.contactsTitle}>Contacts</h2>
-     <Filter filter={filter} handleFilterChange={handleFilterChange} />
-     <ContactList
-          contacts={filterContacts}
-          onRemoveContact={handleRemoveContact}
-        />
-   </div>
-    
- )  
+  useEffect(() => {
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+  }, [contacts]);
+
+  const filterContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
+
+  return (
+    <div className={css.phonebookBox}>
+      <h1 className={css.phonebookTitle}>Phonebook</h1>
+      <ContactForm onAddContact={handleAddContact} />
+      <h2 className={css.contactsTitle}>Contacts</h2>
+      <Filter filter={filter} handleFilterChange={handleFilterChange} />
+      <ContactList
+        contacts={filterContacts}
+        onRemoveContact={handleRemoveContact}
+      />
+    </div>
+  );
 }
  
 export default App;
