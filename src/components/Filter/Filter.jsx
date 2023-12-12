@@ -1,7 +1,13 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import css from './filter.module.css'
 import '../../index.css';
-const Filter = ({ filter, handleFilterChange }) => (
+import { setFilter } from 'store/filterSlice';
+// { filter, handleFilterChange }
+const Filter = () => {
+  // const filter = useSelector(state => state.filter);
+  const dispatch = useDispatch()
+  return(
   <>
     <label className={css.filterLabel} htmlFor="search">Find contacts by name</label>
     <input
@@ -9,10 +15,10 @@ const Filter = ({ filter, handleFilterChange }) => (
       id="search"
       type="text"
       name="filter"
-      value={filter}
-      onChange={handleFilterChange}
+      // value={filter}
+      onChange={(e) => dispatch(setFilter(e.currentTarget.value))}
     />
   </>
-);
+)}
 
 export default Filter;
