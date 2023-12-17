@@ -2,23 +2,25 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addContact } from '../../store/contactSlice';
+import { addContacts } from '../../store/operations';
+import { selectContacts } from '../../store/selectors';
 import css from './contactForm.module.css';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(selectContacts);
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setPhone] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    handleAddContact({ name, number });
+    handleAddContact({ name, phone });
     setName('');
-    setNumber('');
+    setPhone('');
   };
+  
 
-  const handleAddContact = ({ name, number }) => {
+  const handleAddContact = ({ name, phone }) => {
     const sameName = contacts.find(
       el => el.name.toLowerCase() === name.toLowerCase()
     );
@@ -26,15 +28,20 @@ const ContactForm = () => {
       alert(`${sameName.name} is already in contacts.`);
       return;
     }
-    dispatch(addContact({ id: nanoid(), name, number }));
+    dispatch(addContacts({ id: nanoid(), name, phone }));
   };
 
-  const handleChange = ({ target: { name, value } }) => {
-    if (name === 'name') {
-      return setName(value);
-    }
-    if (name === 'number') {
-      return setNumber(value);
+
+  const handleChange = e => {
+    switch (e.currentTarget.name) {
+      case 'name':
+        setName(e.currentTarget.value);
+        break;
+      case 'phone':
+        setPhone(e.currentTarget.value);
+        break;
+      default:
+        return;
     }
   };
 
@@ -56,9 +63,9 @@ const ContactForm = () => {
         id="phoneNumber"
         type="tel"
         pattern="[0-9]*"
-        name="number"
+        name="phone"
         required
-        value={number}
+        value={phone}
         onChange={handleChange}
       />
       <button className={css.phoneBookFormBtn} type="submit">
@@ -69,3 +76,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
