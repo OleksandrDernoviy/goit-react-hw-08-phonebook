@@ -15,11 +15,3 @@ export const selectFilterContacts = createSelector(
     );
   }
 );
-// export const selectFilterContacts = state => {
-  
-//   const contacts = selectContacts(state);
-//   const filter = selectFilter(state);  
-//   return contacts.filter(contact =>
-//     contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
-//   );
-// };

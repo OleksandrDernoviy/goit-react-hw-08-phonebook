@@ -1,0 +1,23 @@
+
+.userBox{
+    display: flex;
+    justify-content: space-between;
+    width:300px;
+    /* padding: 12px 0; */
+}
+
+.userName{
+    /* margin: 0;
+    padding: 8px 0 0; */
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btnLogOut{
+    padding: 3px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: lightcoral;
+    display: block;
+}

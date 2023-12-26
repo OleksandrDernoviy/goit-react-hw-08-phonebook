@@ -13,5 +13,5 @@ export const filterSlice = createSlice({
 })
 
 export const { actionFilter } = filterSlice.actions
-
+export const filterReducer = filterSlice.reducer;
 

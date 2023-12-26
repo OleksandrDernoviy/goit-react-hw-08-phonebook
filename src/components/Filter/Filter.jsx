@@ -1,12 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 // import { selectFilter } from 'store/selectors';
-import css from './filter.module.css'
+import css from './filter.module.css';
 import '../../index.css';
-import { actionFilter } from 'store/filterSlice';
+import { actionFilter } from 'store/contacts/filterSlice';
 
 const Filter = () => {
- 
   const dispatch = useDispatch();
   return (
     <>
@@ -18,14 +17,10 @@ const Filter = () => {
         id="search"
         type="text"
         name="filter"
-       
         onChange={e => dispatch(actionFilter(e.currentTarget.value))}
       />
     </>
   );
-}
+};
 
 export default Filter;
-
-
-

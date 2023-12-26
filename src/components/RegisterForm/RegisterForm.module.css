@@ -1,0 +1,48 @@
+
+
+.regForm {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  align-items: center;
+  width: 300px;
+  height: auto; 
+  margin: auto; 
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+
+.regFormTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.regFormLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+
+.regFormLabel input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.regFormBtn {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.regFormBtn:hover {
+  background-color: #27ae60;
+}

@@ -1,26 +1,24 @@
-
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addContacts } from '../../store/operations';
-import { selectContacts } from '../../store/selectors';
+import { addContacts } from '../../store/contacts/contactsOperations';
+import { selectContacts } from '../../store/contacts/contactsSelectors';
 import css from './contactForm.module.css';
 
-const ContactForm = () => {
+  const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setPhone] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    handleAddContact({ name, phone });
+    handleAddContact({ name, number });
     setName('');
     setPhone('');
   };
-  
 
-  const handleAddContact = ({ name, phone }) => {
+  const handleAddContact = ({ name, number }) => {
     const sameName = contacts.find(
       el => el.name.toLowerCase() === name.toLowerCase()
     );
@@ -28,16 +26,15 @@ const ContactForm = () => {
       alert(`${sameName.name} is already in contacts.`);
       return;
     }
-    dispatch(addContacts({ id: nanoid(), name, phone }));
+    dispatch(addContacts({ id: nanoid(), name, number }));
   };
-
 
   const handleChange = e => {
     switch (e.currentTarget.name) {
       case 'name':
         setName(e.currentTarget.value);
         break;
-      case 'phone':
+      case 'number':
         setPhone(e.currentTarget.value);
         break;
       default:
@@ -63,9 +60,9 @@ const ContactForm = () => {
         id="phoneNumber"
         type="tel"
         pattern="[0-9]*"
-        name="phone"
+        name="number"
         required
-        value={phone}
+        value={number}
         onChange={handleChange}
       />
       <button className={css.phoneBookFormBtn} type="submit">
@@ -76,4 +73,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
