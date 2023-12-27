@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[77],{5077:function(e,r,t){t.r(r),t.d(r,{default:function(){return i}});t(2791);var a={},c=t(184),i=function(){return(0,c.jsx)("div",{children:(0,c.jsx)("img",{className:a.errorImg,src:"https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700",alt:"imgError"})})}}}]);
-//# sourceMappingURL=77.4a98be8e.chunk.js.map
