@@ -16,31 +16,16 @@
     background-color: gray;
 }
 
-/* .filterInput:focus + .filterLabel {
+.filterInput:focus + .filterLabel {
   color: green;
-} */
+}
 
 /* .filterInput:focus + .filterLabel,
 .filterInput:not(:placeholder-shown) + .filterLabel {
   color: green;
 } */
 
-.filterContainer{
-position: relative;
-}
 
-.filterInput:focus + .filterLabel,
-.filterInput:not(:placeholder-shown) + .filterLabel {
-  color: green;
-}
 
-/* .filterLabel {
-     font-size: 19px;
-    font-weight: 700;
-  position: absolute;
-  top: 0;
-  left: 5px;
-  pointer-events: none;
-  transition: color 0.3s ease-out;
-  margin-bottom: 5px;
-} */
+
+
