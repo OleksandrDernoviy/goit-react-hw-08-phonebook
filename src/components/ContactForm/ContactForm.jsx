@@ -10,6 +10,8 @@ import css from './contactForm.module.css';
   const contacts = useSelector(selectContacts);
   const [name, setName] = useState('');
   const [number, setPhone] = useState('');
+  const [isInputFocused, setIsInputFocused] = useState(false);
+    
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -44,6 +46,13 @@ import css from './contactForm.module.css';
 
   return (
     <form className={css.phoneBookForm} onSubmit={handleSubmit}>
+      <h1
+        className={`${css.phoneBookFormTitle} ${
+          isInputFocused ? css.focusedContact : ''
+        }`}
+      >
+        Phonebook
+      </h1>
       <label htmlFor="checkName">Name</label>
       <input
         className={css.phoneBookInput}
@@ -53,6 +62,8 @@ import css from './contactForm.module.css';
         required
         value={name}
         onChange={handleChange}
+        onFocus={() => setIsInputFocused(true)}
+        onBlur={() => setIsInputFocused(false)}
       />
       <label htmlFor="phoneNumber">Number</label>
       <input
@@ -64,6 +75,8 @@ import css from './contactForm.module.css';
         required
         value={number}
         onChange={handleChange}
+        onFocus={() => setIsInputFocused(true)}
+        onBlur={() => setIsInputFocused(false)}
       />
       <button className={css.phoneBookFormBtn} type="submit">
         Add Contact

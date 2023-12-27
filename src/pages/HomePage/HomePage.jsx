@@ -1,17 +1,17 @@
 
 import React from 'react'
 import css from './homePage.module.css'
+// import phoneImage from '../../materials/img/phone1.png';
+import phoneImage from '../../materials/img/phoneBook.png'
 const HomePage = () => {
   return (
-    <div>
-      <img
-        className={css.errorImg}
-        src={`https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700`}
-        alt="imgError"
-      />
-      {/* <h1>HomePage</h1> */}
+    <div className={css.homePageBox}>
+      <h1 className={css.homePageTitle}>PHONEBOOK</h1>
+      {/* <img className={css.homePageImgBook} src={phoneImageBook} alt="homePageImgBook" /> */}
+      <img className={css.homePageImg} src={phoneImage} alt="homePageImg" />
     </div>
   );
 }
 
 export default HomePage
+

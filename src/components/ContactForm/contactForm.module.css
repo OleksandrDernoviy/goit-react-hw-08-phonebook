@@ -17,6 +17,7 @@
 .phoneBookFormBtn{
     padding: 5px;
     cursor: pointer;
+    color: black;
     border: none;
     border-radius: 5px;
     background-color: gray;
@@ -27,12 +28,30 @@
     transition: background-color 0.3s;
 }
 .phoneBookInput{
+    color: black;
+    font-size: 16px;
+    font-weight: 500; 
     width: 280px;
     /* width: 100%; */
     background-color: transparent;
+    border-radius: 4px;
+    padding: 0 5px 0 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
 .phoneBookFormBtn:hover {
-   background-color: #27ae60;
+   /* background-color: #27ae60; */
+   background-color: yellow;
+   background-color: green;
 }
-    
+ 
+.phoneBookFormTitle{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.focusedContact{
+    color: yellow;
+}

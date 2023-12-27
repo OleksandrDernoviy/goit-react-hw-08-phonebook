@@ -9,7 +9,7 @@ const ContactsPage = () => {
   return (
     <div className={css.phonebookBox}>
       <div className={css.phonebookFormBox}>
-        <h1 className={css.phonebookTitle}>Phonebook</h1>
+        {/* <h1 className={css.phonebookTitle}>Phonebook</h1> */}
         <ContactForm />
         <h2 className={css.contactsTitle}>Contacts</h2>
         <Filter />

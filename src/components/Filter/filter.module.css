@@ -11,21 +11,25 @@
     margin-bottom: 10px;
     /* width: 200px; */
     width: 100%;
+    color: black;
+    font-size: 16px;
+    font-weight: 500; 
     max-width: 260px;
     padding: 0 5px 0 5px;
     background-color: gray;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+
+}
+.filterInput:focus::placeholder{
+    border: none;
+    color: green;
 }
 
-.filterInput:focus + .filterLabel {
-  color: green;
+.focused{
+    color: yellow;
 }
-
-/* .filterInput:focus + .filterLabel,
-.filterInput:not(:placeholder-shown) + .filterLabel {
-  color: green;
-} */
-
-
 
 
 

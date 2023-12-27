@@ -1,0 +1,63 @@
+
+.homePageBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
+.homePageTitle {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideInVertical 4s linear;
+  font-size: 45px;
+  font-weight: 700;
+  color: yellow;
+  margin-bottom: 50px;
+  
+}
+
+@keyframes slideInVertical {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+} 
+
+
+.homePageImgBook{
+  width: 150px;
+  position: absolute;
+  margin: 0 auto;
+}
+
+
+
+.homePageImg{
+  display: block;
+  max-width: 320px;
+  white-space: nowrap;
+  animation: slideIn 4s linear;
+  margin: 0 auto;
+
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}  
+
+
+
+
+

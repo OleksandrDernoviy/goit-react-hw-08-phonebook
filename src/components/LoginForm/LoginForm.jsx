@@ -42,64 +42,6 @@ export const LoginForm = () => {
 
 
 
-// import { useDispatch } from 'react-redux';
-// import { useState } from 'react';
-// import {logIn} from '../../store/auth/authOperations'
-
-// export const LoginForm = () => {
-//   const dispatch = useDispatch();
-  
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-
-//   const handleChangeInput = e => {
-//     switch (e.currentTarget.name) {
-//       case 'email':
-//         setEmail(e.currentTarget.value);
-//         break;
-//       case 'password':
-//         setPassword(e.currentTarget.value);
-//         break;
-//       default:
-//         return;
-//     }
-//   };
-
- 
-//   const onSubmitForm = e => {
-//     e.preventDefault();
-//     dispatch(logIn({ email, password }));
-//     setEmail('');
-//     setPassword('');
-//   };
-
-//   return (
-//     <form onSubmit={onSubmitForm}>
-//       <h2>Log In</h2>
-//         <label>
-//           Email:
-//           <input
-//             type="email"
-//             name="email"
-//             required
-//             value={email}
-//             onChange={handleChangeInput}
-//           />
-//         </label>
-//         <label>
-//           Password:
-//           <input
-//             type="password"
-//             name="password"
-//             required
-//             value={password}
-//             onChange={handleChangeInput}
-//           />
-//         </label>
-//       <button type="submit">Log In</button>
-//     </form>
-//   );
-// };
 
 
 

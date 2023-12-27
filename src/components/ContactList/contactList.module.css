@@ -3,17 +3,18 @@
     width: 100%;
     max-width: 350px;
     height: auto;
-    /* background-color: gray; */
     border-radius: 2px;
-    /* border: 1px solid yellow; */
+   
 }
 
 .contactListItem{
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    border: 1px solid black;
-    /* background-color: yellow; */
+    border: 1px solid gray;
+    border-radius: 8px;
+    /* border: none; */
+    margin-bottom: 2px;
 }
 .contactDelBtn{
     padding: 3px;
