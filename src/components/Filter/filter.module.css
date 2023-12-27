@@ -1,11 +1,46 @@
 .filterLabel{
     font-size: 19px;
     font-weight: 700;
-    color: blue;
+    /* color: grey; */
+    color: black;
     margin-bottom: 5px;
 }
+
+
 .filterInput{
     margin-bottom: 10px;
-    width: 200px;
+    /* width: 200px; */
+    width: 100%;
+    max-width: 260px;
+    padding: 0 5px 0 5px;
     background-color: gray;
 }
+
+/* .filterInput:focus + .filterLabel {
+  color: green;
+} */
+
+/* .filterInput:focus + .filterLabel,
+.filterInput:not(:placeholder-shown) + .filterLabel {
+  color: green;
+} */
+
+.filterContainer{
+position: relative;
+}
+
+.filterInput:focus + .filterLabel,
+.filterInput:not(:placeholder-shown) + .filterLabel {
+  color: green;
+}
+
+/* .filterLabel {
+     font-size: 19px;
+    font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  pointer-events: none;
+  transition: color 0.3s ease-out;
+  margin-bottom: 5px;
+} */

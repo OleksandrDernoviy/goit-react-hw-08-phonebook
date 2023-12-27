@@ -8,10 +8,12 @@ import React from 'react'
 const ContactsPage = () => {
   return (
     <div className={css.phonebookBox}>
-      <h1 className={css.phonebookTitle}>Phonebook</h1>
-      <h2 className={css.contactsTitle}>Contacts</h2>    
-      <ContactForm />
-      <Filter />
+      <div className={css.phonebookFormBox}>
+        <h1 className={css.phonebookTitle}>Phonebook</h1>
+        <ContactForm />
+        <h2 className={css.contactsTitle}>Contacts</h2>
+        <Filter />
+      </div>
       <ContactList />
     </div>
   );
