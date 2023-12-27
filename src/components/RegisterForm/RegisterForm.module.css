@@ -5,12 +5,13 @@
   flex-direction: column;
   /* gap: 10px; */
   align-items: center;
-  width: 300px;
-  height: auto; 
-  margin: auto; 
+  max-width: 300px; 
+  margin: 0 auto; 
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -19,22 +20,28 @@
   margin-bottom: 20px;
 }
 
-.regFormLabel {
+.regFormLable {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
 
-.regFormLabel input {
-  padding: 10px;
+.regFormInput {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 260px;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 }
 
 .regFormBtn {
-  padding: 10px;
+   padding: 7px 10px;
   background-color: #3498db;
   color: #fff;
   border: none;

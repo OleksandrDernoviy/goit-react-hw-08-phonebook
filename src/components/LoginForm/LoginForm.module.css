@@ -1,60 +1,20 @@
 
-/* .LogForm {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
-.logFormTitle {
-  text-align: center;
-  color: #333;
-}
 
-.logFormLabel {
-  display: block;
-  margin: 15px 0;
-  font-size: 16px;
-  color: #555;
-}
-
-.logformLabel input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.logformBtn {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.logformBtn:hover {
-  background-color: #0056b3;
-} */
-
-.LogForm {
+.logForm {
+  /* margin-top: 20px;   */
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px; /* або будь-яка інша ширина за вашим вибором */
-  margin: auto; /* це вирівнює форму по центру */
+  justify-content: center;
+  max-width: 300px; 
+  width: 100%;
+  margin: 0 auto; 
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .logFormTitle {
@@ -68,15 +28,21 @@
   margin-bottom: 15px;
 }
 
-.regFormLable {
-  padding: 10px;
+.logFormInput {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;  
+  padding: 5px 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  background-color: transparent;
 }
 
 .logFormBtn {
-  padding: 10px;
+  padding: 7px 10px;
   background-color: #3498db;
   color: #fff;
   border: none;
@@ -86,5 +52,5 @@
 }
 
 .logFormBtn:hover {
-  background-color: #2980b9;
+   background-color: #27ae60;
 }

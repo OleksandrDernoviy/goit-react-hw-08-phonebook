@@ -10,8 +10,15 @@ import css from './userMenu.module.css';
   return (
     <div className={css.userBox}>
       {/* <div><img src=''/></div> */}
-      <p className={css.userName}>Welcome, {userName}</p>
-      <button className={css.btnLogOut} type="button" onClick={() => dispatch(logOut())}>
+      <p className={css.userName}>
+        <span className={css.userNameSpan}>Welcome </span>
+        {userName}
+      </p>
+      <button
+        className={css.btnLogOut}
+        type="button"
+        onClick={() => dispatch(logOut())}
+      >
         Logout
       </button>
     </div>
