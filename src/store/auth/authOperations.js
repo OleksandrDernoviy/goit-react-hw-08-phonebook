@@ -16,6 +16,7 @@ const token = {
   },
 };
 
+
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
@@ -24,6 +25,11 @@ export const register = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
+      if (error.response && error.response.status === 400) {
+        toast.error('Error: This name or email already exists.');
+      } else {
+        toast.error('Error: Something went wrong. Please try again.');
+      }
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -67,9 +73,3 @@ export const refreshUser = createAsyncThunk(
   }
 );
 
-
-
-
-// else {
-//            toast.error('невірний логін або пароль');
-//           }

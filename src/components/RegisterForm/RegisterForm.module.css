@@ -1,9 +1,8 @@
 
 
-.regForm {
+ .regForm {
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
   align-items: center;
   max-width: 300px; 
   margin: 0 auto; 
@@ -41,6 +40,17 @@
   outline: none;
 }
 
+.regFormInput:focus {
+  border: 1px solid rgb(194, 191, 27);
+}
+
+.regFormInput:-webkit-autofill,
+.regFormInput:-webkit-autofill:hover,
+.regFormInput:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-text-fill-color: grey;
+}
+
 .regFormBtn {
    padding: 7px 10px;
   background-color: #3498db;
@@ -53,4 +63,26 @@
 
 .regFormBtn:hover {
   background-color: #27ae60;
-}
+} 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+

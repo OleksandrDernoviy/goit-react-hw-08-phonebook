@@ -42,6 +42,19 @@
   outline: none;
 }
 
+.logFormInput:focus {
+  border: 1px solid rgb(194, 191, 27);
+}
+
+.logFormInput:-webkit-autofill,
+.logFormInput:-webkit-autofill:hover,
+.logFormInput:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-text-fill-color: grey;
+}
+
+
+
 .logFormBtn {
   padding: 7px 10px;
   background-color: #3498db;
@@ -54,4 +67,8 @@
 
 .logFormBtn:hover {
    background-color: #27ae60;
+}
+
+.eye-icon {
+  cursor: pointer;
 }

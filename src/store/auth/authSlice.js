@@ -1,10 +1,8 @@
 
-
 import { createSlice } from '@reduxjs/toolkit';
 import { register, logIn, logOut, refreshUser } from '../auth/authOperations';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
-
 
 
 const initialState = {
